@@ -82,7 +82,7 @@
                             <tr>
                                 @if($item2->kategori == 'makanan')
                                 <td>{{ $item2->menu }}</td>
-                                @for($i = 1; $i <= 12; $i++) <td>{{ $result[$item2->menu][$i] }}</td>
+                                @for($i = 1; $i <= 12; $i++) <td>{{($result[$item2->menu][$i] !=0)? $result[$item2->menu][$i] : '' }}</td>
                                     @endfor
                                     <td class="fw-bold">
                                         {{ number_format($jumlahmenu[$item2->menu], 0, ',', '.') }}
@@ -98,7 +98,7 @@
                             <tr>
                                 @if($item->kategori == 'minuman')
                                 <td>{{ $item->menu }}</td>
-                                @for($i = 1; $i <= 12; $i++) <td>{{ $result[$item->menu][$i] }}</td>
+                                @for($i = 1; $i <= 12; $i++) <td>{{ ($result[$item->menu][$i] !=0)? $result[$item->menu][$i] : '' }}</td>
                                     @endfor
                                     <td class="fw-bold">
                                         {{ number_format($jumlahmenu[$item->menu], 0, ',', '.') }}
